@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView3 =  findViewById(R.id.textView3);
         String valor2 = textView3.getText() + " :: " + ++transversal;
-        textView3.setText(valor);
+        textView3.setText(valor2);
     }
 
     public void abrirActividad(View view) {

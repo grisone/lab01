@@ -36,6 +36,8 @@
         android:layout_width="300dp"
         android:layout_height="61dp"
         android:contentDescription="@string/app_name"
+        android:drawableLeft="@drawable/ic_launcher_background"
+        android:drawableRight="@drawable/ic_launcher_background"
         android:text="@string/titulo1"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
