@@ -5,8 +5,14 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
+
         applicationId "com.example.testaplication"
         minSdkVersion 14
+// =======
+//        applicationId "com.example.a3ala3"
+//        minSdkVersion 29
+
+
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
