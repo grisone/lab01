@@ -13,6 +13,7 @@
         android:layout_width="138dp"
         android:layout_height="44dp"
         android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
         android:contentDescription="@string/app_name"
         android:lineSpacingExtra="12sp"
         android:text="@string/titulo2"
@@ -29,19 +30,20 @@
         app:layout_constraintVertical_bias="0.299"
         tools:visibility="visible" />
 
+
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="206dp"
         android:layout_marginBottom="68dp"
         android:onClick="cerrarActividad"
         android:text="@string/botondos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.185"
+        app:layout_constraintVertical_bias="0.642"
         tools:ignore="MissingConstraints"
         tools:visibility="visible" />
 

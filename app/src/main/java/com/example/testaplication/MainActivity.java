@@ -10,9 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int transversal = 0;
-
-    private int inicial;
+    public static int transversal = 0;
+    private static int inicial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         TextView textView2 =  findViewById(R.id.textView2);
-        String valor = textView2.getText() + " :: " + ++inicial;
-        textView2.setText(valor);
+        String valor2 = textView2.getText() + " :: " + ++inicial;
+        textView2.setText(valor2);
 
         TextView textView3 =  findViewById(R.id.textView3);
-        String valor2 = textView3.getText() + " :: " + ++transversal;
-        textView3.setText(valor2);
+        String valor3 = textView3.getText() + " :: " + ++transversal;
+        textView3.setText(valor3);
     }
 
     public void abrirActividad(View view) {
