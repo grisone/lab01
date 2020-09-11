@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">TestAplication merge 3ala3</string>
-    <string name="botonuno">Prueba Tu Suerte</string>
+    <string name="app_name">Laboratorio</string>
+
+    <string name="titulo1">Pantalla Uno</string>
+    <string name="titulo2">Pantalla Dos</string>
+
+    <string name="subtitulo1">1 a 2</string>
+    <string name="subtitulo2">2 a 1</string>
+
+    <string name="botonuno">Siguiente</string>
+    <string name="botondos">Volver</string>
 </resources>

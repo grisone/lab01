@@ -5,19 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
-    tools:context=".MainActivity"
+    tools:context=".DosActivity"
     tools:visibility="visible">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="550dp"
+        android:layout_height="165dp"
         android:contentDescription="@string/app_name"
-        android:text="Pantalla Dos"
+        android:lineSpacingExtra="12sp"
+        android:text="@string/titulo2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:typeface="monospace"
         android:visibility="visible"
+        app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:onClick="cerrarActividad"
+        android:text="@string/botondos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
