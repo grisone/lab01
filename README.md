@@ -1,22 +1,33 @@
 # Laboratorio de computación
 
-## Tarea 1
 
-### Puntos de Evaluación
+Repositorio de Aplicación de Curso de Computación móvil para Universidad Mayor.
 
-Activity 1
-Existe activity 1                                           0,5
-Activity 1 personalizada                                    0,5
-Existe Boton Sguiente                                       0,5
-Boton Siguiente muestra mensaje emergente por pantalla      1.0
-Boton Siguiente abre 2 y deja abierta la activity actul     1.0
+## Tareas 
 
-Activity 2
-Existe activity 2                                           0,5
-Activity 2 personalizada                                    0,5
-Exirte Botón Volver                                         0,5
-Botón Volver regresa a la activity 1                        1,0
-Botón Volver finaliza la activity actual                    1,0
+
+### Puntos de Evaluación Tarea Nro 1 
+
+- [x] Existe Activity 1 **0,5**
+- [x] Activity 1 personalizada **0,5**
+- [x] Existe Botón Siguiente **0,5**
+- [x] Botón Siguiente, muestra mensaje emergente por pantalla **1.0**
+- [x] Botón Siguiente, abre 2 y deja abierta la Activity actual **1.0**
+- [x] Existe Activity 2 **0,5**
+- [x] Activity 2 personalizada **0,5**
+- [x] Existe Botón Volver  **0,5**
+- [x] Botón Volver regresa a la Activity 1 **1,0**
+- [x] Botón Volver finaliza la Activity 2, actual **1,0**
+
+
+### Colaboradores
+
+ - [Hectór Niñez](https://github.com/desarrolloPerrosky)
+ - [Jaime Santí](https://github.com/jsanti-mayor)
+ - [Felipe Pinto](https://github.com/grisone)
+
+
+
 
 
 
