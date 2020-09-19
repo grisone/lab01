@@ -22,7 +22,7 @@ Repositorio de Aplicación de Curso de Computación móvil para Universidad Mayo
 
 ### Puntos de Evaluación Tarea Nro 2
 
-- [ ] 2 pantallas usando `ConstraintLayout`
+- [ ] 2 pantallas usando `ConstraintLayout` //F.Pinto
 - [ ] Activity 1, EditText para ingresar Nombre
 - [ ] Activity 1, Boton que lleve a Activity 2 solo si el texto tiene contenido, de lo contrario, mostrar toast(*Debe Ingresar el Nombre*).
 - [ ] Activity 2, muestra TextView con texto de la primera activity.
