@@ -1,12 +1,7 @@
 <resources>
-    <string name="app_name">Laboratorio</string>
-
-    <string name="titulo1">Pantalla Uno</string>
-    <string name="titulo2">Pantalla Dos</string>
-
-    <string name="subtitulo1">1 a 2</string>
-    <string name="subtitulo2">2 a 1</string>
-
-    <string name="botonuno">Siguiente</string>
-    <string name="botondos">Volver</string>
+    <string name="app_name">Lab01</string>
+    <string name="txtTitulo">LABORATORIO 01</string>
+    <string name="editText">INGRESAR TEXTO</string>
+    <string name="boton">SIGUIENTE</string>
+    <string name="textView">TEXTVIEW</string>
 </resources>
