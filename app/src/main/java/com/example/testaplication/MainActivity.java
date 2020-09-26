@@ -1,31 +1,77 @@
 package com.example.testaplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edt;
-    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edt = (EditText) findViewById(R.id.edtMA);
-        btn = (Button) findViewById(R.id.btnMA);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
-    //MÉTODOS
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+        // original
+        //return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int opcion = item.getItemId();
+        String mensajeria = "";
+        switch (opcion){
+            case android.R.id.home:
+                mensajeria = "Opcion retornar";
+                break;
+            case R.id.home:
+                mensajeria = "Opcion casita";
+                break;
+            case R.id.menu_opcion_100:
+                mensajeria = "Vamos a ver la pajjjina";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.org")));
+                break;
+            case R.id.menu_opcion_200:
+                Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+                intent.putExtra("Texto", "Vengo desde opcion");
+                startActivity(intent);
+                return true;
+
+
+            case R.id.menu_opcion_900:
+                finish();
+                return true;
+
+            default:
+                mensajeria = "Sin Opcion";
+        }
+
+        Toast.makeText(getApplicationContext(), mensajeria, Toast.LENGTH_SHORT).show();
+
+        return true;
+        //return super.onOptionsItemSelected(item);
+    }
+
     public void cambiarPantalla(View view){
+        EditText edt = (EditText) findViewById(R.id.edtMA);
+
         Context contexto = getApplicationContext();
         String edtTexto = edt.getText().toString();
 

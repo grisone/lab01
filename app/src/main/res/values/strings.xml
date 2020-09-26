@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">Lab01</string>
+
+    <string name="app_name">Lab 01</string>
+
     <string name="txtTitulo">LABORATORIO 01</string>
     <string name="editText">INGRESAR TEXTO</string>
     <string name="boton">SIGUIENTE</string>
     <string name="textView">TEXTVIEW</string>
+
+
+    <string name="strNavegar">ver Pagina</string>
+    <string name="strAcerca">Acerca de</string>
+
+    <string name="strSalir">Cerrando</string>
 </resources>

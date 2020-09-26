@@ -29,6 +29,43 @@ Repositorio de Aplicación de Curso de Computación móvil para Universidad Mayo
 
 
 
+### Puntos de Evaluación Tarea Nro 3
+
+#### Des Criterio Puntaje
+
+- [ ] Activity 1: Existe Activity 1 personalizada *0,5*
+- [x] Activity 1: Option menu: intent a url *2,0*
+- [x] Activity 1: Option menu: ítem url con ícono 0,5
+- [x] Activity 1: Option menu: intent a Activity 2 2,0
+- [x] Activity 1: Option menu: ítem Activity 2 con ícono 0,5
+- [ ] Activity 2: Existe Activity 2 personalizada* 0,5
+- [x] Activity 2: Existe Up Button 0,5
+- [x] Activity 2: Up Button retorna ha activity 1 0,5
+
+
+~~ Entiéndase Activity personalizada ~~
+
+Incluir 2 o más elementos de la paleta de Android (distintos) no vistos en clase como:
+
+- [ ] ImageView
+- [ ] ImageButton
+- [ ] CheckBox
+- [ ] RadioButton
+- [ ] Switch
+- [ ] WebView
+- [ ] VideoView
+- [ ] ProgressBar
+- [ ] SeekBar
+- [ ] RatingBar
+- [ ] ScrollView
+- [ ] FloatingActionButton
+- [ ] ..otros.. ( .....).
+
+
+
+
+
+
 ### Colaboradores
 
  - [Hectór Niñez](https://github.com/desarrolloPerrosky)
