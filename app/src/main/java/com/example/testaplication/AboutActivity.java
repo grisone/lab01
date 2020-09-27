@@ -3,26 +3,25 @@ package com.example.testaplication;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutActivity extends AppCompatActivity {
 
-    String texto;
-    TextView txt;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_by_option);
+        setContentView(R.layout.activity_acerca_de);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        texto = getIntent().getStringExtra("Texto");
-        txt = (TextView) findViewById(R.id.txtSP);
-        txt.setText(texto.toUpperCase());
+        String texto = getIntent().getStringExtra("Texto");
+        Toast.makeText(getApplicationContext(), texto, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -39,4 +38,14 @@ public class AboutActivity extends AppCompatActivity {
         return true;// super.onOptionsItemSelected(item);
     }
 
+
+    public void vistaImagen(View view) {
+        ImageView imagen = (ImageView) findViewById(R.id.imageView);
+        ToggleButton boton = (ToggleButton)findViewById(R.id.toggleButton);
+        if(boton.isChecked()){
+            imagen.setVisibility(ImageView.VISIBLE);
+        } else {
+            imagen.setVisibility(ImageView.INVISIBLE);
+        }
+    }
 }

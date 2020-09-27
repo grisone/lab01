@@ -8,10 +8,12 @@
         android:orderInCategory="100"
         app:showAsAction="always"/>
 
-    <item   android:id="@+id/menu_opcion_200"
-            android:title="@string/strAcerca"
-            android:orderInCategory="200"
-            app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/menu_opcion_200"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:orderInCategory="200"
+        android:title="@string/strAcerca"
+        app:showAsAction="collapseActionView" />
 
     <item   android:id="@+id/menu_opcion_900"
             android:title="@string/strSalir"

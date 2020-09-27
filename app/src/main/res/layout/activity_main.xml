@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFondo"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:text="@string/txtTitulo"
             android:textSize="24sp"
-            android:textColor="@color/colorLetra"
+            android:textColor="@color/colorFondo"
             android:textStyle="bold"/>
 
         <EditText
@@ -38,10 +38,10 @@
             android:inputType="textPersonName"
             android:hint="@string/editText"
             android:textSize="16sp"
-            android:textColorHint="@color/colorLetra"
-            android:textColor="@color/colorLetra"
+            android:textColorHint="@color/colorFondo"
+            android:textColor="@color/colorFondo"
             android:textStyle="bold"
-            app:backgroundTint="@color/colorLetra"
+            app:backgroundTint="@color/colorFondo"
             android:autofillHints="" />
 
         <Button

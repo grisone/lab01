@@ -35,29 +35,13 @@ public class SegundaPantalla extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         int opcion = item.getItemId();
-        String mensajeria = "";
         switch (opcion){
-            case android.R.id.home:
-                return super.onOptionsItemSelected(item);
-
             case R.id.home:
-                mensajeria = "Opcion casita";
+            case android.R.id.home:
+                onBackPressed();
                 break;
-            case R.id.menu_opcion_100:
-                mensajeria = "Opcion 100";
-                break;
-            default:
-                mensajeria = "Sin Opcion";
         }
-
-        Toast.makeText(getApplicationContext(), mensajeria, Toast.LENGTH_SHORT).show();
-
-        return true;
-        //return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
     }
-
-
-
 }
