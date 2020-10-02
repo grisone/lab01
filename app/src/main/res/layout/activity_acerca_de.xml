@@ -54,8 +54,8 @@
             android:checked="false"
             android:onClick="vistaImagen"
             android:text="ToggleButton"
-            android:textOff="Sin Imagen"
-            android:textOn="Imagen Visible" />
+            android:textOff="Ver Imagen"
+            android:textOn="Ocultar Imagen" />
 
     </LinearLayout>
 

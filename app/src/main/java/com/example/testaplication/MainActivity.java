@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menu_opcion_100:
                 mensajeria = "Vamos a ver la pajjjina";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.org")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lun.com")));
                 break;
             case R.id.menu_opcion_200:
                 Intent intent = new Intent(getApplicationContext(), AboutActivity.class);

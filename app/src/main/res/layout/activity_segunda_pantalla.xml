@@ -8,6 +8,7 @@
     tools:context=".SegundaPantalla">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,9 +23,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/textView"
+            android:textColor="@color/colorLetra2"
             android:textSize="40sp"
-            android:textColor="@color/colorLetra"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="248dp"
+        android:layout_height="166dp"
+        android:text="Bienvenido a Pantalla 2"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
