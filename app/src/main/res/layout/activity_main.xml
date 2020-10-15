@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorBoton"
-            android:onClick="cambiarPantalla"
+            android:onClick="capturarTexto"
             android:text="@string/boton"
             android:textColor="@color/colorLetra"
             android:textSize="20sp"

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SegundaPantalla"></activity>
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".DetalleActivity"></activity>
     </application>
 
 </manifest>

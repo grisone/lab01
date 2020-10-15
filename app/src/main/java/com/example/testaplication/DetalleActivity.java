@@ -11,18 +11,21 @@ import android.widget.ToggleButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AboutActivity extends AppCompatActivity {
+public class DetalleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acerca_de);
+        setContentView(R.layout.activity_detalle);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String texto = getIntent().getStringExtra("Texto");
         Toast.makeText(getApplicationContext(), texto, Toast.LENGTH_SHORT).show();
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -33,13 +36,22 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        onBackPressed();
+        int id =item.getItemId();
+        switch (id){
+            case android.R.id.home:
+                // onBackPressed();
 
-        return true;// super.onOptionsItemSelected(item);
+                //return true;
+            finish();
+        }
+        return  super.onOptionsItemSelected(item);
+
+
+        // super.onOptionsItemSelected(item);
     }
 
 
-    public void vistaImagen(View view) {
+   /* public void vistaImagen(View view) {
         ImageView imagen = (ImageView) findViewById(R.id.imageView);
         ToggleButton boton = (ToggleButton)findViewById(R.id.toggleButton);
         if(boton.isChecked()){
@@ -47,5 +59,5 @@ public class AboutActivity extends AppCompatActivity {
         } else {
             imagen.setVisibility(ImageView.INVISIBLE);
         }
-    }
+    }*/
 }

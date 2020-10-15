@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String clave = "umayor";
+    private EditText edtTexto ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +25,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setHomeButtonEnabled(true);
+        edtTexto = (EditText) findViewById(R.id.edtMA);
+
     }
 
+
+    public void capturarTexto(View view){
+        Context contexto = getApplicationContext();
+        String psw = edtTexto.getText().toString();
+        System.out.println("contraseña :" +psw);
+        String mensaje = "sin mensaje";
+        if(psw.equals(clave)){
+            mensaje = "estoy en el IF";
+            Intent intent = new Intent(getApplicationContext(), SegundaPantalla.class);
+            //intent.putExtra();
+            System.out.println(mensaje);
+            startActivity(intent);
+
+
+        }else{
+            mensaje= "estoy e el else";
+            System.out.println(mensaje);
+            Toast.makeText(contexto, mensaje, Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
+
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -85,4 +115,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+     */
 }
