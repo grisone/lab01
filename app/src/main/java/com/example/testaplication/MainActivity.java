@@ -13,8 +13,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.testaplication.tarea4.ListaActivity;
 
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,19 +42,25 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mensajeria = "Opcion retornar";
                 break;
+
             case R.id.home:
                 mensajeria = "Opcion casita";
                 break;
+
             case R.id.menu_opcion_100:
-                mensajeria = "Vamos a ver la pajjjina";
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lun.com")));
+                mensajeria = "Repositorio del Proyecto";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/grisone/lab01")));
                 break;
+
             case R.id.menu_opcion_200:
                 Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-                intent.putExtra("Texto", "Vengo desde opcion");
+                intent.putExtra("Texto", "Activity Lanzada desde Menu");
                 startActivity(intent);
                 return true;
 
+            case R.id.menu_opcion_400:
+                startActivity(new Intent(getApplicationContext(), ListaActivity.class));
+                return true;
 
             case R.id.menu_opcion_900:
                 finish();

@@ -18,6 +18,9 @@
         </activity>
         <activity android:name=".SegundaPantalla"></activity>
         <activity android:name=".AboutActivity"></activity>
+
+        <activity android:name=".tarea4.ListaActivity"></activity>
+        <activity android:name=".tarea4.DetalleActivity"></activity>
     </application>
 
 </manifest>

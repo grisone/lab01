@@ -9,10 +9,15 @@
 
 
     <string name="strNavegar">ver Pagina</string>
+    <string name="strListado">Listado</string>
     <string name="strAcerca">Acerca de</string>
 
     <string name="strSalir">Cerrando</string>
 
     <string name="logo_description">Para espiritus emprendedores</string>
+
+
+    <string name="tvItemComponent">Component</string>
+    <string name="tvItemField">Item</string>
 
 </resources>

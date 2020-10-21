@@ -9,14 +9,21 @@
         app:showAsAction="always"/>
 
     <item
+        android:id="@+id/menu_opcion_400"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:orderInCategory="400"
+        android:title="@string/strListado"
+        app:showAsAction="collapseActionView" />
+
+    <item
         android:id="@+id/menu_opcion_200"
         android:icon="@android:drawable/ic_dialog_info"
-        android:orderInCategory="200"
+        android:orderInCategory="800"
         android:title="@string/strAcerca"
         app:showAsAction="collapseActionView" />
 
     <item   android:id="@+id/menu_opcion_900"
             android:title="@string/strSalir"
-            android:orderInCategory="200"
+            android:orderInCategory="900"
             app:showAsAction="collapseActionView"/>
 </menu>
