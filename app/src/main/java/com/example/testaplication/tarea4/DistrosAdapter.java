@@ -34,7 +34,7 @@ public class DistrosAdapter extends ArrayAdapter {
         View item = inflater.inflate(R.layout.activity_4_item, null);
 
         ImageView imagen = (ImageView) item.findViewById(R.id.imgAnimal);
-        imagen.setImageResource( R.drawable.ic_logo); // TODO pendiente de manejar esta imagen
+        imagen.setImageResource(data.get(position).getAno());
 
         TextView nombre = (TextView) item.findViewById(R.id.tvContent);
         nombre.setText(data.get(position).getNombre());

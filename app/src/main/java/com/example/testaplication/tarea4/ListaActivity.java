@@ -54,21 +54,12 @@ public class ListaActivity extends AppCompatActivity implements AdapterView.OnIt
 
         // TODO pendiente de especificar que datos de las distribuciones vamos a empotrar y que datos vamos a cargar desde la web
 
-        distribuciones.add(new Distro("aguila", 2001, "1"));
-        distribuciones.add(new Distro("ballena", 2001, "1"));
-        distribuciones.add(new Distro("caballo", 2001, "1"));
-        distribuciones.add(new Distro("camaleon",2001, "1"));
-        distribuciones.add(new Distro("canario", 2001, "1"));
-        distribuciones.add(new Distro("cerdo", 2001, "1"));
-        distribuciones.add(new Distro("delfin", 2001, "1"));
-        distribuciones.add(new Distro("gato", 2001, "1"));
-        distribuciones.add(new Distro("iguana",2001, "1"));
-        distribuciones.add(new Distro("lince",2001, "1"));
-        distribuciones.add(new Distro("lobo", 2001, "1"));
-        distribuciones.add(new Distro("morena", 2001, "1"));
-        distribuciones.add(new Distro("orca", 2001, "1"));
-        distribuciones.add(new Distro("perro", 2001, "1"));
-        distribuciones.add(new Distro("vaca", 2001, "1"));
+        distribuciones.add(new Distro("Debian", R.drawable.debian, "1"));
+        distribuciones.add(new Distro("Elementary", R.drawable.elementary, "1"));
+        distribuciones.add(new Distro("Linux Mint", R.drawable.linux_mint, "1"));
+        distribuciones.add(new Distro("Open SUSE", R.drawable.opensuse, "1"));
+        distribuciones.add(new Distro("SlackWare", R.drawable.slackware, "1"));
+        distribuciones.add(new Distro("Ubuntu", R.drawable.ubuntu, "1"));
     }
 
     @Override
