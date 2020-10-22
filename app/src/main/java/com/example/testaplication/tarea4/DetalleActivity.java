@@ -3,6 +3,7 @@ package com.example.testaplication.tarea4;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,11 +29,17 @@ public class DetalleActivity extends AppCompatActivity {
         barra.setDisplayHomeAsUpEnabled(true);
         barra.setTitle(distro.getNombre());
 
-        TextView txt1 = (TextView) findViewById(R.id.texto);
-        TextView txt2 = (TextView) findViewById(R.id.texto2);
+        ImageView imagen = (ImageView) findViewById(R.id.imagen);
+        TextView txtTitulo = (TextView) findViewById(R.id.textTitulo);
+        TextView txtAno = (TextView) findViewById(R.id.textLanzamiento);
+        TextView txtPaquete = (TextView) findViewById(R.id.textPaquete);
+        TextView txtDetalle = (TextView) findViewById(R.id.textDetalle);
 
-        txt1.setText(distro.getNombre());
-        txt2.setText(distro.getDescripcion());
+        imagen.setImageResource(distro.getImagen());
+        txtTitulo.setText(distro.getNombre());
+        txtDetalle.setText(distro.getDescripcion());
+        txtAno.setText(distro.getLanzamiento());
+        txtPaquete.setText(distro.getPaquete());
 
     }
 

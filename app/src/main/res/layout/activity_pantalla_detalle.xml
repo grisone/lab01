@@ -21,7 +21,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imagen"
             android:layout_width="match_parent"
             android:layout_height="337dp"
             android:layout_marginTop="4dp"
@@ -40,13 +40,15 @@
             tools:layout_editor_absoluteY="367dp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:visibility="visible"
                 android:text="DEBIAN" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="37dp"
@@ -62,7 +64,7 @@
                 android:text="Lanzamiento Inicial" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textLanzamiento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -85,7 +87,7 @@
                 android:text="Metodo de actualizacion:" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textPaquete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -102,9 +104,8 @@
             tools:layout_editor_absoluteY="367dp">
 
 
-
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/textDetalle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -114,14 +115,6 @@
 
         </LinearLayout>
 
-
-
-
     </LinearLayout>
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
