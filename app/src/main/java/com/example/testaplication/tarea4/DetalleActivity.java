@@ -30,6 +30,7 @@ public class DetalleActivity extends AppCompatActivity {
 
         txt1.setText(distro.getNombre());
         txt2.setText(distro.getDescripcion());
+
     }
 
     @Override
