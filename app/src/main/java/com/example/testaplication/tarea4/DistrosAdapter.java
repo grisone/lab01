@@ -33,14 +33,14 @@ public class DistrosAdapter extends ArrayAdapter {
 
         View item = inflater.inflate(R.layout.activity_4_item, null);
 
-        ImageView imagen = (ImageView) item.findViewById(R.id.imgAnimal);
-        imagen.setImageResource(data.get(position).getAno());
+        ImageView imagen = (ImageView) item.findViewById(R.id.imagen);
+        imagen.setImageResource(data.get(position).getImagen());
 
-        TextView nombre = (TextView) item.findViewById(R.id.tvContent);
+        TextView nombre = (TextView) item.findViewById(R.id.textTitulo);
         nombre.setText(data.get(position).getNombre());
 
-        TextView numCelda = (TextView) item.findViewById(R.id.tvField);
-        numCelda.setText(String.valueOf(position));
+        TextView numCelda = (TextView) item.findViewById(R.id.textLanzamiento);
+        numCelda.setText(data.get(position).getLanzamiento()); // String.valueOf(position)
 
         return item;
         //return super.getView(position, convertView, parent);

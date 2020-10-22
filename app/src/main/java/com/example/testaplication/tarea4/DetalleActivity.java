@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testaplication.R;
@@ -21,9 +22,11 @@ public class DetalleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_detalle);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         Distro distro = (Distro) getIntent().getSerializableExtra("distro");
+
+        ActionBar barra = getSupportActionBar();
+        barra.setDisplayHomeAsUpEnabled(true);
+        barra.setTitle(distro.getNombre());
 
         TextView txt1 = (TextView) findViewById(R.id.texto);
         TextView txt2 = (TextView) findViewById(R.id.texto2);
