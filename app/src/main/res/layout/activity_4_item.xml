@@ -44,7 +44,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:gravity="left"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
                 android:text="TextView"
                 android:textStyle="italic" />
         </LinearLayout>
