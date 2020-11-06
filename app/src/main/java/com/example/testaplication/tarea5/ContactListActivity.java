@@ -52,28 +52,6 @@ public class ContactListActivity extends AppCompatActivity implements AdapterVie
         listView.setOnItemClickListener(this); // // asignamos el escucha de eventos
     }
 
-    /*
-        @Override
-        public boolean onPrepareOptionsMenu(Menu menu) {
-
-            if (disableCheckBox) {
-                menu.removeItem(R.id.Done);
-            }
-            MenuItem searchItem = menu.findItem(R.id.menu_search);
-            searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-            searchView.setQueryHint(getResources().getString(R.string.search_hint));
-            if (Utils.hasICS()) {
-                searchItem.collapseActionView();
-            }
-            searchView.setOnQueryTextListener(this);
-            searchView.setIconified(true);
-            return super.onCreateOptionsMenu(menu);
-            menu.add(0, MENU_EDIT, Menu.NONE, getString(R.string.menu_action_edit)).setIcon(R.drawable.ic_action_edit).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            menu.add(0, MENU_DELETE, Menu.NONE, getString(R.string.menu_action_delete)).setIcon(R.drawable.ic_action_delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-            return super.onPrepareOptionsMenu(menu);
-            return true;
-        }
-    */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_contactos, menu);

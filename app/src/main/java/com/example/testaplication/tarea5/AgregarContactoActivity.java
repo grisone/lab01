@@ -1,14 +1,9 @@
 package com.example.testaplication.tarea5;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -17,7 +12,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testaplication.R;
-import com.example.testaplication.SegundaPantalla;
 
 public class AgregarContactoActivity extends AppCompatActivity {
 
@@ -46,36 +40,47 @@ public class AgregarContactoActivity extends AppCompatActivity {
                 onBackPressed();
                 break;
             case R.id.guardar:
-                if (validarContacto()){
+                Contacto contacto = validarContacto();
+                if (contacto!=null){
+                    guardarContacto(contacto);
                     Toast.makeText(getApplicationContext(), "Datos guardados correctamente", Toast.LENGTH_LONG).show();
+                    onBackPressed();
                 }else{
                     Toast.makeText(getApplicationContext(), "Debe ingresar todos los datos", Toast.LENGTH_LONG).show();
-
                 }
-
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean validarContacto(){
-        boolean valido = false;
+    public Contacto validarContacto(){
         EditText edtNombre = (EditText) findViewById(R.id.nombres);
         EditText edtPaterno = (EditText) findViewById(R.id.ap_paterno);
         EditText edtMaterno = (EditText) findViewById(R.id.ap_materno);
         EditText edtFono = (EditText) findViewById(R.id.fono);
-
-
+        ToggleButton tgSexo = (ToggleButton) findViewById(R.id.tbSexo);
 
         if(!edtNombre.getText().toString().isEmpty() &&
                 !edtPaterno.getText().toString().isEmpty() &&
                 !edtMaterno.getText().toString().isEmpty() &&
-                !edtFono.getText().toString().isEmpty()
+                !edtFono.getText().toString().isEmpty() ) {
 
-        ){
-            valido=true;
+            Contacto contacto = new Contacto();
+            contacto.setSexo(tgSexo.getText().toString().equals("Masculino")?"M":"F");
+            contacto.setNombre(edtNombre.getText().toString());
+            contacto.setPaterno(edtPaterno.getText().toString());
+            contacto.setMaterno(edtMaterno.getText().toString());
+            contacto.setTelefono(edtFono.getText().toString());
+
+            return contacto;
         }
-    return valido;
+        return null;
     }
 
+    private void guardarContacto(Contacto contacto){
+        ContactoDataSource dataSource = new ContactoDataSource(this);
+        dataSource.openDb();
+        dataSource.insertarContacto(contacto);
+        dataSource.closeDb();
+    }
 }

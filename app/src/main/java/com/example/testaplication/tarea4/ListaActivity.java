@@ -13,15 +13,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testaplication.R;
-import com.example.testaplication.tarea5.DistroDataSource;
 
 import java.util.ArrayList;
 
 public class ListaActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ArrayList<Distro> distribuciones;
-
-    private DistroDataSource distroDataSource;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +30,6 @@ public class ListaActivity extends AppCompatActivity implements AdapterView.OnIt
         barra.setTitle("Listado de Distros");
 
         poblarListado();
-
-        distroDataSource = new DistroDataSource(this);
-        distroDataSource.openDb();
-        distroDataSource.closeDb();
-
 
         DistrosAdapter adapter;
         adapter = new DistrosAdapter(this, distribuciones);
@@ -79,13 +71,6 @@ public class ListaActivity extends AppCompatActivity implements AdapterView.OnIt
         // Al hacer click sobre uno de los items del ListView mostramos los
         // datos en los TextView.
         Distro distro = distribuciones.get(position);
-
-/*
-        TextView txtNombre = (TextView) findViewById(R.id.tvItemContent);
-        TextView txtDetalle = (TextView) findViewById(R.id.tvItemField);
-        txtNombre.setText(distro.getNombre());
-        txtDetalle.setText(String.valueOf(position));
-*/
 
         Intent intent = new Intent(getApplicationContext(), DetalleActivity.class);
         intent.putExtra("distro",  distro);

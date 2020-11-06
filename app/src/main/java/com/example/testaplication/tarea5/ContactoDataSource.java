@@ -1,5 +1,6 @@
 package com.example.testaplication.tarea5;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -49,6 +50,17 @@ public class ContactoDataSource {
             }
         }
         return lista;
+    }
+
+    public void insertarContacto(Contacto contacto) {
+        ContentValues param = new ContentValues();
+        param.put("nombre", contacto.getNombre());
+        param.put("paterno", contacto.getPaterno());
+        param.put("materno", contacto.getMaterno());
+        param.put("telefono", contacto.getTelefono());
+        param.put("sexo", contacto.getSexo());
+
+        database.insert("contacto", null, param);
     }
 
     public int eliminarContacto(Contacto contacto) {
