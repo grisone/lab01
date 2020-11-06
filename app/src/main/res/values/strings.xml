@@ -21,6 +21,9 @@
     <string name="tvItemComponent">Component</string>
     <string name="tvItemField">Item</string>
 
+    <string name="lblMan">Masculino</string>
+    <string name="lblWoman">Femenino</string>
+
     <string name="verContacto">Detalle Contacto</string>
     <string name="addContacto">Agregar Contacto</string>
     <string name="saveContacto">Guardar Contacto</string>

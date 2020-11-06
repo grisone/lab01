@@ -3,6 +3,8 @@ package com.example.testaplication.tarea5;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -53,20 +55,36 @@ public class AgregarContactoActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public Contacto validarContacto(){
+    public void cambiarSexo(View view){
+        int id = view.getId();
+        if(((CheckBox)view).isChecked()){
+            CheckBox chkMan = (CheckBox) findViewById(R.id.hombre);
+            CheckBox chkWom = (CheckBox) findViewById(R.id.mujer);
+            if(id == R.id.mujer){
+                chkMan.setChecked(false);
+            } else {
+                chkWom.setChecked(false);
+            }
+        }
+    }
+
+    private Contacto validarContacto(){
         EditText edtNombre = (EditText) findViewById(R.id.nombres);
         EditText edtPaterno = (EditText) findViewById(R.id.ap_paterno);
         EditText edtMaterno = (EditText) findViewById(R.id.ap_materno);
         EditText edtFono = (EditText) findViewById(R.id.fono);
-        ToggleButton tgSexo = (ToggleButton) findViewById(R.id.tbSexo);
+        CheckBox chkMan = (CheckBox) findViewById(R.id.hombre);
+        CheckBox chkwom = (CheckBox) findViewById(R.id.mujer);
 
         if(!edtNombre.getText().toString().isEmpty() &&
                 !edtPaterno.getText().toString().isEmpty() &&
                 !edtMaterno.getText().toString().isEmpty() &&
-                !edtFono.getText().toString().isEmpty() ) {
+                !edtFono.getText().toString().isEmpty() &&
+                (chkMan.isChecked() | chkwom.isChecked())
+        ) {
 
             Contacto contacto = new Contacto();
-            contacto.setSexo(tgSexo.getText().toString().equals("Masculino")?"M":"F");
+            contacto.setSexo(chkMan.isChecked()?"M":"F");
             contacto.setNombre(edtNombre.getText().toString());
             contacto.setPaterno(edtPaterno.getText().toString());
             contacto.setMaterno(edtMaterno.getText().toString());
