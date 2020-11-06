@@ -21,6 +21,9 @@
 
         <activity android:name=".tarea4.ListaActivity"></activity>
         <activity android:name=".tarea4.DetalleActivity"></activity>
+
+        <activity android:name=".tarea5.ContactListActivity"></activity>
+        <activity android:name=".tarea5.AgregarContactoActivity"></activity>
     </application>
 
 </manifest>

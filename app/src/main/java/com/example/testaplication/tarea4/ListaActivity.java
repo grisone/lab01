@@ -7,19 +7,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testaplication.R;
+import com.example.testaplication.tarea5.DistroDataSource;
 
 import java.util.ArrayList;
 
 public class ListaActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ArrayList<Distro> distribuciones;
+
+    private DistroDataSource distroDataSource;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,11 @@ public class ListaActivity extends AppCompatActivity implements AdapterView.OnIt
         barra.setTitle("Listado de Distros");
 
         poblarListado();
+
+        distroDataSource = new DistroDataSource(this);
+        distroDataSource.openDb();
+        distroDataSource.closeDb();
+
 
         DistrosAdapter adapter;
         adapter = new DistrosAdapter(this, distribuciones);

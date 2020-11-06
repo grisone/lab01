@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/agregar"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:title="@string/addContacto"
+        android:orderInCategory="100"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/eliminar"
+        android:icon="@drawable/ic_baseline_person_remove_24"
+        android:title="@string/removeContacto"
+        android:orderInCategory="100"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/guardar"
+        android:icon="@drawable/ic_baseline_save_24"
+        android:title="@string/saveContacto"
+        android:orderInCategory="100"
+        android:visible="false"
+        app:showAsAction="always"/>
+</menu>

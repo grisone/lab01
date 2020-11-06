@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.testaplication.tarea4.ListaActivity;
+import com.example.testaplication.tarea5.ContactListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.menu_opcion_400:
                 startActivity(new Intent(getApplicationContext(), ListaActivity.class));
+                return true;
+
+            case R.id.menu_opcion_500:
+                startActivity(new Intent(getApplicationContext(), ContactListActivity.class));
                 return true;
 
             case R.id.menu_opcion_900:

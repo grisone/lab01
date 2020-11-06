@@ -16,6 +16,13 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/menu_opcion_500"
+        android:icon="@drawable/ic_baseline_storage_24"
+        android:orderInCategory="400"
+        android:title="@string/strListadoBBDD"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/menu_opcion_200"
         android:icon="@android:drawable/ic_dialog_info"
         android:orderInCategory="800"
