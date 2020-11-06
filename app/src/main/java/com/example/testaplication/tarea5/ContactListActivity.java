@@ -15,12 +15,15 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testaplication.R;
+import com.example.testaplication.tarea4.DetalleActivity;
+import com.example.testaplication.tarea4.Distro;
 
 import java.util.List;
 
 public class ContactListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ContactoDataSource dataSource;
+    List<Contacto> listaContactos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +33,17 @@ public class ContactListActivity extends AppCompatActivity implements AdapterVie
         ActionBar barra = getSupportActionBar();
         barra.setDisplayHomeAsUpEnabled(true);
         barra.setTitle("Lista de Contactos");
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         dataSource = new ContactoDataSource(this);
-        dataSource.openDb();
-        List<Contacto> listaContactos = dataSource.getListaContactos();
-        dataSource.closeDb();
 
-/*
-        distroDataSource = new DistroDataSource(this);
-        distroDataSource.openDb();
-        distroDataSource.closeDb();
-*/
+        dataSource.openDb();
+        listaContactos = dataSource.getListaContactos();
+        dataSource.closeDb();
 
         ContactoAdapter adapter = new ContactoAdapter(this, listaContactos);
 
@@ -50,33 +52,32 @@ public class ContactListActivity extends AppCompatActivity implements AdapterVie
         listView.setOnItemClickListener(this); // // asignamos el escucha de eventos
     }
 
-/*
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
+    /*
+        @Override
+        public boolean onPrepareOptionsMenu(Menu menu) {
 
-        if (disableCheckBox) {
-            menu.removeItem(R.id.Done);
+            if (disableCheckBox) {
+                menu.removeItem(R.id.Done);
+            }
+            MenuItem searchItem = menu.findItem(R.id.menu_search);
+            searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+            searchView.setQueryHint(getResources().getString(R.string.search_hint));
+            if (Utils.hasICS()) {
+                searchItem.collapseActionView();
+            }
+            searchView.setOnQueryTextListener(this);
+            searchView.setIconified(true);
+            return super.onCreateOptionsMenu(menu);
+            menu.add(0, MENU_EDIT, Menu.NONE, getString(R.string.menu_action_edit)).setIcon(R.drawable.ic_action_edit).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            menu.add(0, MENU_DELETE, Menu.NONE, getString(R.string.menu_action_delete)).setIcon(R.drawable.ic_action_delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            return super.onPrepareOptionsMenu(menu);
+            return true;
         }
-        MenuItem searchItem = menu.findItem(R.id.menu_search);
-        searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        searchView.setQueryHint(getResources().getString(R.string.search_hint));
-        if (Utils.hasICS()) {
-            searchItem.collapseActionView();
-        }
-        searchView.setOnQueryTextListener(this);
-        searchView.setIconified(true);
-        return super.onCreateOptionsMenu(menu);
-        menu.add(0, MENU_EDIT, Menu.NONE, getString(R.string.menu_action_edit)).setIcon(R.drawable.ic_action_edit).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        menu.add(0, MENU_DELETE, Menu.NONE, getString(R.string.menu_action_delete)).setIcon(R.drawable.ic_action_delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        return super.onPrepareOptionsMenu(menu);
-        return true;
-    }
-*/
+    */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_contactos, menu);
         menu.findItem(R.id.agregar).setVisible(true);
-        //menu.removeItem(R.id.menu_eliminar);
         return true;
     }
 
@@ -94,11 +95,12 @@ public class ContactListActivity extends AppCompatActivity implements AdapterVie
         return super.onOptionsItemSelected(item);
     }
 
-
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String mensaje = "Posicion [" + String.valueOf(position) + "] largo[" + String.valueOf(id) + "]";
-        Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_LONG).show();
+        Contacto contacto = listaContactos.get(position);
+
+        Intent intent = new Intent(getApplicationContext(), ContactoDetalleActivity.class);
+        intent.putExtra("contacto", contacto);
+        startActivity(intent);
     }
 }

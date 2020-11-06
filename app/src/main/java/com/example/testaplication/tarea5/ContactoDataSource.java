@@ -48,7 +48,10 @@ public class ContactoDataSource {
                 lista.add(per);
             }
         }
-
         return lista;
+    }
+
+    public int eliminarContacto(Contacto contacto) {
+        return database.delete("contacto", "id=?", new String[]{String.valueOf(contacto.getId())});
     }
 }

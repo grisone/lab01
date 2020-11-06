@@ -21,6 +21,7 @@
     <string name="tvItemComponent">Component</string>
     <string name="tvItemField">Item</string>
 
+    <string name="verContacto">Detalle Contacto</string>
     <string name="addContacto">Agregar Contacto</string>
     <string name="saveContacto">Guardar Contacto</string>
     <string name="removeContacto">Eliminar Contacto</string>
